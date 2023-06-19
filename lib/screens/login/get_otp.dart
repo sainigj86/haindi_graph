@@ -1,6 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:haindi_graph/common/bottom_bar.dart';
 import 'package:haindi_graph/common/custom_button.dart';
 import 'package:haindi_graph/constants/global_variables.dart';
 import 'package:haindi_graph/screens/top_screen/top_screen.dart';
@@ -77,7 +78,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TopScreen(),
+                        builder: (context) => const BottomNavigationScreen(),
                       ),
                     );
                   },

@@ -18,9 +18,13 @@ class LoginAndRegisterButton extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Container(
-                width: double.infinity,
-                height: 300,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 300,
+                  child: Image.network('https://listimg.pinclipart.com/picdir/s/395-3957770_3582869de9a2412793e6-online-shopping-icon-png-clipart.png'),
+                ),
               ),
               const SizedBox(
                 height: 30,

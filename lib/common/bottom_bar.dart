@@ -1,6 +1,10 @@
-// ignore_for_file: override_on_non_overriding_member
+// ignore_for_file: override_on_non_overriding_member, unused_field
 
 import 'package:flutter/material.dart';
+import 'package:haindi_graph/screens/bottom_navigation_bar_screens/branch_screen.dart';
+import 'package:haindi_graph/screens/bottom_navigation_bar_screens/cart_screen.dart';
+import 'package:haindi_graph/screens/bottom_navigation_bar_screens/home_screen.dart';
+import 'package:haindi_graph/screens/bottom_navigation_bar_screens/profile_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
@@ -10,8 +14,13 @@ class BottomNavigationScreen extends StatefulWidget {
 }
 
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
-  final List<Widget> _widget = <Widget>[];
-  var _currentIndex = 0;
+  var _currentIndex = 1;
+  final List<Widget> _widget = <Widget>[
+    const BranchScreen(),
+    const HomeScreen(),
+    const CartScreen(),
+    const ProfileScreen()
+  ];
   @override
   void _updateIndex(int index) {
     setState(() {
@@ -22,7 +31,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Text('data'),
+      body: _widget[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
@@ -37,11 +46,11 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.card_travel),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.person),
             label: '',
           ),
         ],
