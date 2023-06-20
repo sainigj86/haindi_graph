@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: color == null ? GlobalVariables.greendarkColor : Colors.black,
+          color: color == null ? Colors.white : Colors.black,
         ),
       ),
       onPressed: onTap,
@@ -37,7 +37,7 @@ class CustomButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),
-        backgroundColor: color,
+        backgroundColor: GlobalVariables.greendarkColor,
       ),
     );
   }

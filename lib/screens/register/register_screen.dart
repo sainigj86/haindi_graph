@@ -40,103 +40,124 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: SafeArea(
         child: Container(
           width: double.infinity,
+          height: double.infinity,
           decoration: BoxDecoration(
             border: Border.all(width: .1, color: Colors.grey),
             color: const Color.fromARGB(123, 220, 223, 223),
           ),
-          child: Column(
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 50),
-                child: Text(
-                  'Hello!',
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      shadows: GlobalVariables.textShadow),
-                ),
-              ),
-              const Text(
-                'Create your account to start',
-                style: TextStyle(fontSize: 17),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(15),
-                child: Column(
-                  children: [
-                    Row(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 120),
+              child: Column(
+                children: [
+                  const Text(
+                    'Hello!',
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        shadows: GlobalVariables.textShadow),
+                  ),
+                  const SizedBox(
+                    height: 11,
+                  ),
+                  const Text(
+                    'Create your account to start',
+                    style: TextStyle(fontSize: 17),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Column(
                       children: [
-                        Expanded(
-                          child: CustomTextField(
-                            controller: _firstNameController,
-                            hintText: 'First Name',
-                          ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: CustomTextField(
+                                controller: _firstNameController,
+                                hintText: 'First Name',
+                              ),
+                            ),
+                            const SizedBox(width: 15),
+                            Expanded(
+                              child: CustomTextField(
+                                controller: _middleNameController,
+                                hintText: 'Middle Name',
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 15),
-                        Expanded(
-                          child: CustomTextField(
-                            controller: _middleNameController,
-                            hintText: 'Middle Name',
-                          ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          controller: _lastNameController,
+                          hintText: 'Last Name',
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          controller: _mobileNumberController,
+                          hintText: 'Mobile number',
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          controller: _emailController,
+                          hintText: 'Email address',
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        CustomButton(
+                          text: 'Sign up',
+                          onTap: () {},
+                          maxHeight: 80,
+                          borderRadius: 10,
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            buildCircularIcon('assets/images/google.png'),
+                            const SizedBox(
+                              width: 25,
+                            ),
+                            buildCircularIcon('assets/images/apple.png'),
+                            const SizedBox(
+                              width: 25,
+                            ),
+                            buildCircularIcon('assets/images/fecbook.png'),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Not a member?'),
+                            TextButton(
+                                onPressed: () {},
+                                child: const Text('Register now'))
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          height: 4,
+                          width: 200,
+                          color: Colors.black,
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    CustomTextField(
-                      controller: _lastNameController,
-                      hintText: 'Last Name',
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    CustomTextField(
-                      controller: _mobileNumberController,
-                      hintText: 'Mobile number',
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    CustomTextField(
-                      controller: _emailController,
-                      hintText: 'Email address',
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    CustomButton(
-                      text: 'Sign up',
-                      onTap: () {},
-                      maxHeight: 80,
-                      borderRadius: 10,
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        buildCircularIcon('assets/images/google.png'),
-                        buildCircularIcon('assets/images/apple.png'),
-                        buildCircularIcon('assets/images/fecbook.png'),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text('Not a member?'),
-                        TextButton(
-                            onPressed: () {}, child: const Text('Register now'))
-                      ],
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
