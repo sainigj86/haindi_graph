@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        appBarTheme: const AppBarTheme(
+          color: Color.fromARGB(255, 171, 204, 166),
+        ),
       ),
       home: const LoginAndRegisterButton(),
     );

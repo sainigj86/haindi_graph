@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:haindi_graph/constants/global_variables.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/home_product_screen.dart';
 import 'package:haindi_graph/screens/search/search_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeProductScreen extends StatefulWidget {
+  const HomeProductScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeProductScreen> createState() => _HomeProductScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeProductScreenState extends State<HomeProductScreen> {
   List lists = [
     {
       'name': 'ram',
@@ -69,25 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
     },
   ];
 
-  Widget buildCircularImage(String imageUrl) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.white,
-      ),
-      padding: const EdgeInsets.all(8),
-      margin: const EdgeInsets.all(8),
-      child: ClipOval(
-        child: Image.network(
-          imageUrl,
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,14 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomeProductScreen(),
-                            ),
-                          );
-                        },
+                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.only(top: 22),
                           child: GridView.builder(
@@ -155,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 child: Container(
                                   decoration:
-                                      const BoxDecoration(color: Colors.white),
+                                      const BoxDecoration(color: Colors.amber),
                                   child: Column(
                                     children: [
                                       Expanded(
@@ -165,7 +137,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       Container(
-                                        color: GlobalVariables.greendarkColor,
+                                        color: const Color.fromARGB(
+                                            255, 43, 95, 45),
                                         height: 30,
                                         child: Row(
                                           mainAxisAlignment:
@@ -180,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               children: [
                                                 Text(
                                                   lists[index]['pay'],
-                                                  style: const TextStyle(
+                                                  style: TextStyle(
                                                       color: Colors.white),
                                                 ),
                                               ],
@@ -197,46 +170,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          width: 2,
-                          color: const Color.fromARGB(255, 34, 84, 36),
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(30),
-                          bottomLeft: Radius.circular(30),
-                        ),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color.fromARGB(255, 30, 80, 32),
-                            spreadRadius: .4,
-                            blurRadius: .4,
-                            offset: Offset(0, .4),
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          buildCircularImage(
-                              'https://cpimg.tistatic.com/03447145/b/4/Wooden-Handicrafts-Elephant.jpeg'),
-                          buildCircularImage(
-                              'https://5.imimg.com/data5/TC/DE/MY-20031763/handicarft-itme-1000x1000.jpeg'),
-                          buildCircularImage(
-                              'https://m.media-amazon.com/images/I/61UQu6t2JaL._SL1500_.jpg'),
-                          buildCircularImage(
-                              'https://i.etsystatic.com/34592816/r/il/ace084/3856116303/il_794xN.3856116303_99sd.jpg'),
-                          buildCircularImage(
-                              'https://www.ulcdn.net/images/products/399704/slide/666x363/Daisy_Figurine_Multicolour_2.jpg?1632826902'),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
