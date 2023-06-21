@@ -56,13 +56,13 @@ class LoginAndRegisterButton extends StatelessWidget {
                   style: TextStyle(fontSize: 16),
                 ),
                 const SizedBox(
-                  height: 60,
+                  height: 70,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Container(
                     width: double.infinity,
-                    height: 80,
+                    height: 70,
                     decoration: BoxDecoration(
                       border: Border.all(
                           width: 4, color: GlobalVariables.greendarkColor),
@@ -92,10 +92,9 @@ class LoginAndRegisterButton extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 4,
-                          height: double.infinity,
-                          color: GlobalVariables.greendarkColor
-                        ),
+                            width: 4,
+                            height: double.infinity,
+                            color: GlobalVariables.greendarkColor),
                         GestureDetector(
                           onTap: () {
                             Navigator.push(

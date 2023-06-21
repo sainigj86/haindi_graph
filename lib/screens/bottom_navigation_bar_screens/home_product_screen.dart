@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haindi_graph/screens/products/products_details_screen.dart';
 import 'package:haindi_graph/screens/search/search_screen.dart';
 
 class HomeProductScreen extends StatefulWidget {
@@ -88,6 +89,7 @@ class _HomeProductScreenState extends State<HomeProductScreen> {
       ),
       body: Container(
         width: double.infinity,
+        height: double.infinity,
         decoration: BoxDecoration(
           border: Border.all(width: 0.5, color: Colors.grey),
           color: const Color(0x7cdee5e5),
@@ -107,27 +109,35 @@ class _HomeProductScreenState extends State<HomeProductScreen> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 22),
-                          child: GridView.builder(
-                            itemCount: lists.length,
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 11,
-                              mainAxisSpacing: 11,
-                            ),
-                            itemBuilder: (context, index) {
-                              return ClipRRect(
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(30),
-                                  bottomRight: Radius.circular(30),
-                                ),
-                                child: Container(
-                                  decoration:
-                                      const BoxDecoration(color: Colors.amber),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 22),
+                        child: GridView.builder(
+                          itemCount: lists.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 11,
+                            mainAxisSpacing: 11,
+                          ),
+                          itemBuilder: (context, index) {
+                            return ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(30),
+                                bottomRight: Radius.circular(30),
+                              ),
+                              child: Container(
+                                decoration:
+                                    const BoxDecoration(color: Colors.amber),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ProductDetailsScreen(),
+                                      ),
+                                    );
+                                  },
                                   child: Column(
                                     children: [
                                       Expanded(
@@ -153,7 +163,7 @@ class _HomeProductScreenState extends State<HomeProductScreen> {
                                               children: [
                                                 Text(
                                                   lists[index]['pay'],
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       color: Colors.white),
                                                 ),
                                               ],
@@ -164,9 +174,9 @@ class _HomeProductScreenState extends State<HomeProductScreen> {
                                     ],
                                   ),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),
