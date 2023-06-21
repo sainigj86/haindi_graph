@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:haindi_graph/common/custom_button.dart';
 import 'package:haindi_graph/constants/global_variables.dart';
 import 'package:haindi_graph/screens/products/product_check_delevery_date.dart';
 
@@ -42,10 +43,15 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               icon: const Icon(Icons.menu, color: Colors.black),
               onPressed: () {},
             ),
-            const CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/images/Gajendra.jpg'),
-            ),
+            const Row(
+              children: [
+                Icon(Icons.search),
+                SizedBox(
+                  width: 8,
+                ),
+                Icon(Icons.card_travel)
+              ],
+            )
           ],
         ),
       ),
@@ -69,8 +75,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         child: Image.network(
                             'https://img1.exportersindia.com/product_images/bc-full/dir_59/1756663/marbal-handicraft-items-373776.jpg'),
                       ),
-                      Column(
-                        children: const [
+                      const Column(
+                        children: [
                           Icon(Icons.share),
                           Text(
                             'Share',
@@ -80,9 +86,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       )
                     ],
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text("SHIKHA HANDICRAFT Marble Flower"),
                       Text("Vase Showpiece for Home Decoration"),
                       Text("(7.5x7.5x15 cm) 6 Inch Stoneware Vase"),
@@ -119,9 +125,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   const SizedBox(
                     height: 11,
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text('Free Delivery'),
                       Text('(2,704) ratings'),
                     ],
@@ -134,13 +140,15 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: lists.length,
+                        // itemExtent: 111,
                         itemBuilder: (context, index) {
                           return Container(
-                            width: 100,
-                            height: 110,
+                            width: 90,
+                            // height: 110,
+                            margin: const EdgeInsets.only(right: 15),
                             decoration: BoxDecoration(
-                              border: Border.all(width: 2, color: Colors.grey),
-                              // borderRadius: BorderRadius.circular(11),
+                              border: Border.all(width: 5, color: Colors.grey),
+                              borderRadius: BorderRadius.circular(11),
                             ),
                             child: Image.network(
                               lists[index]['image'],
@@ -155,8 +163,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   const SizedBox(
                     height: 11,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Icon(
                         Icons.arrow_back_ios_new_outlined,
                       ),
@@ -192,16 +200,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   const SizedBox(
                     height: 25,
                   ),
-                  const Text(
-                    'Check Delivery Date',
-                    style: TextStyle(fontSize: 20),
-                  ),
+                  const CheckDeliveryDateScreen(),
                   const SizedBox(
-                    height: 25,
-                  ),
-                  CustomTextField(
-                    controller: _piccodeController,
-                    hintText: 'Enter Pincode',
+                    height: 60,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 50),
