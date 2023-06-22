@@ -43,8 +43,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               icon: const Icon(Icons.menu, color: Colors.black),
               onPressed: () {},
             ),
-            const Row(
-              children: [
+            Row(
+              children: const [
                 Icon(Icons.search),
                 SizedBox(
                   width: 8,
@@ -75,8 +75,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         child: Image.network(
                             'https://img1.exportersindia.com/product_images/bc-full/dir_59/1756663/marbal-handicraft-items-373776.jpg'),
                       ),
-                      const Column(
-                        children: [
+                      Column(
+                        children: const [
                           Icon(Icons.share),
                           Text(
                             'Share',
@@ -86,9 +86,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       )
                     ],
                   ),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("SHIKHA HANDICRAFT Marble Flower"),
                       Text("Vase Showpiece for Home Decoration"),
                       Text("(7.5x7.5x15 cm) 6 Inch Stoneware Vase"),
@@ -125,9 +125,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   const SizedBox(
                     height: 11,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text('Free Delivery'),
                       Text('(2,704) ratings'),
                     ],
@@ -163,8 +163,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   const SizedBox(
                     height: 11,
                   ),
-                  const Row(
-                    children: [
+                  Row(
+                    children: const [
                       Icon(
                         Icons.arrow_back_ios_new_outlined,
                       ),

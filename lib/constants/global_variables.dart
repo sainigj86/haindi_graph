@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 // String uri = 'https://wicked-underwear-pike.cyclic.app';
@@ -31,4 +33,8 @@ class GlobalVariables {
       color: Colors.black,
     ),
   ];
+
+  static const TextStyle Textbold = TextStyle(
+    fontWeight: FontWeight.bold,
+  );
 }

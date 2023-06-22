@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/screens/bottom_navigation_bar_screens/branch_screen.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/cart_screen.dart';
+import 'package:haindi_graph/screens/cart_screens/cart_screen.dart';
 import 'package:haindi_graph/screens/bottom_navigation_bar_screens/home_screen.dart';
 import 'package:haindi_graph/screens/bottom_navigation_bar_screens/profile_screen.dart';
 
