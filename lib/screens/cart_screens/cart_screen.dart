@@ -45,13 +45,13 @@ class _CartScreenState extends State<CartScreen> {
                           offset: Offset(0, 2))
                     ],
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 10, left: 15),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10, left: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          children: const [
+                          children: [
                             Icon(Icons.check_box),
                             SizedBox(
                               width: 8,
@@ -63,7 +63,7 @@ class _CartScreenState extends State<CartScreen> {
                             )
                           ],
                         ),
-                        const Text('Confirmation will be sent to your email.')
+                        Text('Confirmation will be sent to your email.')
                       ],
                     ),
                   ),

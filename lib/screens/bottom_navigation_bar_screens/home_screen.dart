@@ -221,20 +221,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         ],
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          buildCircularImage(
-                              'https://cpimg.tistatic.com/03447145/b/4/Wooden-Handicrafts-Elephant.jpeg'),
-                          buildCircularImage(
-                              'https://5.imimg.com/data5/TC/DE/MY-20031763/handicarft-itme-1000x1000.jpeg'),
-                          buildCircularImage(
-                              'https://m.media-amazon.com/images/I/61UQu6t2JaL._SL1500_.jpg'),
-                          buildCircularImage(
-                              'https://i.etsystatic.com/34592816/r/il/ace084/3856116303/il_794xN.3856116303_99sd.jpg'),
-                          buildCircularImage(
-                              'https://www.ulcdn.net/images/products/399704/slide/666x363/Daisy_Figurine_Multicolour_2.jpg?1632826902'),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            buildCircularImage(
+                                'https://cpimg.tistatic.com/03447145/b/4/Wooden-Handicrafts-Elephant.jpeg'),
+                            buildCircularImage(
+                                'https://5.imimg.com/data5/TC/DE/MY-20031763/handicarft-itme-1000x1000.jpeg'),
+                            buildCircularImage(
+                                'https://m.media-amazon.com/images/I/61UQu6t2JaL._SL1500_.jpg'),
+                            buildCircularImage(
+                                'https://i.etsystatic.com/34592816/r/il/ace084/3856116303/il_794xN.3856116303_99sd.jpg'),
+                            buildCircularImage(
+                                'https://www.ulcdn.net/images/products/399704/slide/666x363/Daisy_Figurine_Multicolour_2.jpg?1632826902'),
+                          ],
+                        ),
                       ),
                     )
                   ],
