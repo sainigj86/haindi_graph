@@ -37,7 +37,7 @@ class _ComplateAccountDetailsScreenState
                   color: Colors.black,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -47,11 +47,12 @@ class _ComplateAccountDetailsScreenState
                             selected = 1;
                           });
                         },
-                        child: const Column(
-                          children: [
+                        child: Column(
+                          children: const [
                             CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.grey,
+                              child: Icon(Icons.add),
                             ),
                             Text('GST'),
                             Text('Details')
@@ -64,11 +65,12 @@ class _ComplateAccountDetailsScreenState
                             selected = 2;
                           });
                         },
-                        child: const Column(
-                          children: [
+                        child: Column(
+                          children: const [
                             CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.grey,
+                              child: Icon(Icons.map),
                             ),
                             Text('Pickup'),
                             Text('Address')
@@ -81,11 +83,12 @@ class _ComplateAccountDetailsScreenState
                             selected = 3;
                           });
                         },
-                        child: const Column(
-                          children: [
+                        child: Column(
+                          children: const [
                             CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.grey,
+                              child: Icon(Icons.food_bank),
                             ),
                             Text('Bank'),
                             Text('Details')
@@ -94,15 +97,18 @@ class _ComplateAccountDetailsScreenState
                       ),
                       GestureDetector(
                         onTap: () {
-                          setState(() {
-                            selected = 4;
-                          });
+                          setState(
+                            () {
+                              selected = 4;
+                            },
+                          );
                         },
-                        child: const Column(
-                          children: [
+                        child: Column(
+                          children: const [
                             CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.grey,
+                              child: Icon(Icons.person),
                             ),
                             Text('Supplier'),
                             Text('Details'),
@@ -122,16 +128,24 @@ class _ComplateAccountDetailsScreenState
                   ),
                 ),
                 Container(
-                  child: selected == 1 ? const GstDetailsScreen() : const SizedBox(),
+                  child: selected == 1
+                      ? const GstDetailsScreen()
+                      : const SizedBox(),
                 ),
                 Container(
-                  child: selected == 2 ? const PickupAddressScreen() : const SizedBox(),
+                  child: selected == 2
+                      ? const PickupAddressScreen()
+                      : const SizedBox(),
                 ),
                 Container(
-                  child: selected == 3 ? const BankDetailsScreen() : const SizedBox(),
+                  child: selected == 3
+                      ? const BankDetailsScreen()
+                      : const SizedBox(),
                 ),
                 Container(
-                  child: selected == 4 ? const SuppliderDetailsScreen() : const SizedBox(),
+                  child: selected == 4
+                      ? const SuppliderDetailsScreen()
+                      : const SizedBox(),
                 )
               ],
             ),
@@ -151,7 +165,7 @@ class _ComplateAccountDetailsScreenState
                 ),
                 child: const Center(
                   child: Text(
-                    'Start selling',
+                    'Continue',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

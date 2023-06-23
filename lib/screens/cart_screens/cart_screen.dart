@@ -45,7 +45,7 @@ class _CartScreenState extends State<CartScreen> {
                           offset: Offset(0, 2))
                     ],
                   ),
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.only(top: 10, left: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

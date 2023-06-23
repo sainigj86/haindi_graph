@@ -44,7 +44,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                           )
                         ],
                       ),
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.only(left: 15),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +87,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                                 )
                               ],
                             ),
-                            child: const Padding(
+                            child: Padding(
                               padding: EdgeInsets.only(left: 15),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -117,7 +117,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                                 )
                               ],
                             ),
-                            child: const Padding(
+                            child: Padding(
                               padding: EdgeInsets.only(left: 15),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -147,7 +147,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                                 )
                               ],
                             ),
-                            child: const Padding(
+                            child: Padding(
                               padding: EdgeInsets.only(left: 15),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -167,7 +167,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 import '../../common/custom_textfield.dart';
@@ -12,6 +14,9 @@ class GstDetailsScreen extends StatefulWidget {
 
 class _GstDetailsScreenState extends State<GstDetailsScreen> {
   TextEditingController _enterGstinController = TextEditingController();
+
+  bool _isDetailsVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -53,12 +58,84 @@ class _GstDetailsScreenState extends State<GstDetailsScreen> {
                     minimumSize:
                         MaterialStateProperty.all<Size>(const Size(100, 47)),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      _isDetailsVisible = true;
+                    });
+                  },
                   child: const Text('Verify'),
                 ),
-              )
+              ),
             ],
           ),
+          SizedBox(
+            height: 30,
+          ),
+          Visibility(
+            visible: _isDetailsVisible,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 1,
+                  height: 270,
+                  color: GlobalVariables.greendarkColor,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('GSTIN'),
+                    Text(
+                      '27AAJCA4788P1ZR',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Business Name'),
+                    Text(
+                      'ATS CARGO PRIVATE LIMITED',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('PAN Number'),
+                    Text(
+                      'AAJCA4788P',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Business Type'),
+                    Text(
+                      'Service Provision',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Registered Business Address'),
+                    Container(
+                      child: Text(
+                        '208, 2ND FLOOR, AVOIR\nNIRMAL GALAXY, MULUND\nWLBS MARG, Pincode - \n400080, Mumbai Suburban, Maharashtra',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
