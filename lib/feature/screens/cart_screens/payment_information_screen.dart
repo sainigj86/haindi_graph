@@ -1,8 +1,8 @@
-// ignore_for_file: unnecessary_const
+// ignore_for_file: unnecessary_const, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
-import '../../constants/global_variables.dart';
+import '../../../constants/global_variables.dart';
 
 class PaymentInformatinScreen extends StatelessWidget {
   const PaymentInformatinScreen({super.key});

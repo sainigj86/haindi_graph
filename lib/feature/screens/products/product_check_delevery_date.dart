@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../common/custom_textfield.dart';
-import '../../constants/global_variables.dart';
+import '../../../common/custom_textfield.dart';
+import '../../../constants/global_variables.dart';
 
 class CheckDeliveryDateScreen extends StatefulWidget {
   const CheckDeliveryDateScreen({super.key});

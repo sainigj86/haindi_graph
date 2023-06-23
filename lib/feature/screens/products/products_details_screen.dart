@@ -1,11 +1,11 @@
-// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/common/custom_button.dart';
 import 'package:haindi_graph/constants/global_variables.dart';
-import 'package:haindi_graph/screens/products/product_check_delevery_date.dart';
+import 'package:haindi_graph/feature/screens/products/product_check_delevery_date.dart';
 
-import '../../common/custom_textfield.dart';
+import '../../../common/custom_textfield.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key});
@@ -208,7 +208,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     padding: const EdgeInsets.only(top: 50),
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 60,
                       decoration: BoxDecoration(
                         border: Border.all(
                             width: 4, color: GlobalVariables.greendarkColor),

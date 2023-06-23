@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../constants/global_variables.dart';
+import '../../../constants/global_variables.dart';
 
 class PaymentOptionScreen extends StatelessWidget {
   const PaymentOptionScreen({super.key});

@@ -1,10 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_constructors
 
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/constants/global_variables.dart';
-import 'package:haindi_graph/screens/cart_screens/payment_information_screen.dart';
+import 'package:haindi_graph/feature/screens/cart_screens/payment_information_screen.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

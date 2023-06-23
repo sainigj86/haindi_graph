@@ -1,9 +1,9 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, unnecessary_brace_in_string_interps, avoid_print, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/common/custom_button.dart';
 import 'package:haindi_graph/common/custom_textfield.dart';
-import 'package:haindi_graph/screens/login/get_otp.dart';
+import 'package:haindi_graph/feature/screens/login/get_otp.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,7 +13,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _mobileNumberController = TextEditingController();
+  final _signInFormKey = GlobalKey<FormState>();
+  final TextEditingController _mobileNumberController = TextEditingController();
 
   Widget buildCircularIcon(String imagePath) {
     return Container(
@@ -30,6 +31,12 @@ class _LoginScreenState extends State<LoginScreen> {
         fit: BoxFit.contain,
       ),
     );
+  }
+
+  login() {
+    var _mobile = _mobileNumberController.text.trim();
+
+    print("Mobile ${_mobile}");
   }
 
   @override
@@ -50,7 +57,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.all(60.0),
                   child: Container(
                     width: double.infinity,
-                    // height: 350,
                     child: Image.network(
                         'https://cdn0.iconfinder.com/data/icons/mobile-functions-colored-outlined-pixel-perfect/64/mobile-28-512.png'),
                   ),
@@ -59,9 +65,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
-                      CustomTextField(
-                          controller: _mobileNumberController,
-                          hintText: 'Enter mobile number'),
+                      Form(
+                        key: _signInFormKey,
+                        child: CustomTextField(
+                            controller: _mobileNumberController,
+                            hintText: 'Enter mobile number'),
+                      ),
                       const SizedBox(
                         height: 30,
                       ),
@@ -69,10 +78,16 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: CustomButton(
                           text: 'Send OTP',
                           onTap: () {
-                            Navigator.push(
+                            if (_signInFormKey.currentState!.validate()) {
+                              login();
+
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const GetOtpScreen()));
+                                  builder: (context) => const GetOtpScreen(),
+                                ),
+                              );
+                            }
                           },
                           maxHeight: 80,
                           borderRadius: 10,
@@ -104,14 +119,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  height: 4,
-                  width: 200,
-                  color: Colors.black,
                 ),
               ],
             ),

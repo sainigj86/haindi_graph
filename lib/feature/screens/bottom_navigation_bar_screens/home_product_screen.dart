@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:haindi_graph/screens/products/products_details_screen.dart';
-import 'package:haindi_graph/screens/search/search_screen.dart';
+import 'package:haindi_graph/feature/screens/products/products_details_screen.dart';
+import 'package:haindi_graph/feature/screens/search/search_screen.dart';
 
 class HomeProductScreen extends StatefulWidget {
   const HomeProductScreen({Key? key}) : super(key: key);

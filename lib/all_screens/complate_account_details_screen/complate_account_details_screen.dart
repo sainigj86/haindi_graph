@@ -1,4 +1,4 @@
-// ignore_for_file: sized_box_for_whitespace, unused_label
+// ignore_for_file: sized_box_for_whitespace, unused_label, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/all_screens/complate_account_details_screen/bank_details_screen.dart';

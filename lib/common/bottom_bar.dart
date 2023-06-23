@@ -1,10 +1,10 @@
 // ignore_for_file: override_on_non_overriding_member, unused_field
 
 import 'package:flutter/material.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/branch_screen.dart';
-import 'package:haindi_graph/screens/cart_screens/cart_screen.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/home_screen.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/profile_screen.dart';
+import 'package:haindi_graph/feature/screens/bottom_navigation_bar_screens/branch_screen.dart';
+import 'package:haindi_graph/feature/screens/cart_screens/cart_screen.dart';
+import 'package:haindi_graph/feature/screens/bottom_navigation_bar_screens/home_screen.dart';
+import 'package:haindi_graph/feature/screens/bottom_navigation_bar_screens/profile_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
@@ -38,7 +38,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         onTap: _updateIndex,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.branding_watermark),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -46,7 +46,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_travel),
+            icon: Icon(Icons.card_giftcard),
             label: '',
           ),
           BottomNavigationBarItem(

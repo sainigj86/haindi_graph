@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haindi_graph/constants/global_variables.dart';
-import 'package:haindi_graph/screens/bottom_navigation_bar_screens/home_product_screen.dart';
-import 'package:haindi_graph/screens/search/search_screen.dart';
+import 'package:haindi_graph/feature/screens/bottom_navigation_bar_screens/home_product_screen.dart';
+import 'package:haindi_graph/feature/screens/search/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
